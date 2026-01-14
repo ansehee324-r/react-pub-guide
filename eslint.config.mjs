@@ -1,7 +1,7 @@
+import radpub from '@taejun.goo/eslint-config-radpub';
 import { defineConfig, globalIgnores } from 'eslint/config';
 import nextVitals from 'eslint-config-next/core-web-vitals';
 import nextTs from 'eslint-config-next/typescript';
-import radpub from 'eslint-config-radpub';
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
