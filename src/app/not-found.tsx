@@ -13,7 +13,7 @@ export default function NotFound() {
         <p>요청하신 페이지가 존재하지 않거나 이동되었습니다.</p>
 
         <Link href='/'>
-          홈으로 이동
+          <Button>홈으로 이동</Button>
         </Link>
       </div>
     </Container>
