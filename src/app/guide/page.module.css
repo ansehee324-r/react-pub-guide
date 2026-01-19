@@ -1,0 +1,55 @@
+.guideWrap {
+  padding-right: 200px;
+}
+
+.guideItem {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  width: 180px;
+}
+
+.guideItem ul{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.guideButton {
+  color: #11111180;
+}
+
+.active {
+  color: #111;
+  font-weight: 700;
+}
+
+.title {
+  margin-bottom: 60px;
+}
+
+.section {
+  margin-bottom: 100px;
+}
+
+.section h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.section > div {
+  margin-bottom: 32px;
+}
+
+.section h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}

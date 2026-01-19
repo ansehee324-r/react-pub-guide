@@ -5,7 +5,6 @@ import '@/styles/globals.css';
 import '@/styles/theme.css';
 
 import { pretendard } from '@/fonts/fonts';
-import AppShell from '@/components/layout/AppShell';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -20,9 +19,7 @@ export default function RootLayout({
   return (
     <html lang='en' className={pretendard.className}>
       <body>
-        <AppShell>
-          {children}
-        </AppShell>
+        {children}
       </body>
     </html>
   );
