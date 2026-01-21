@@ -1,0 +1,95 @@
+.form-field {
+  position: relative;
+  width: 100%;
+}
+
+.form-field__label {
+  display: block;
+  width: 100%;
+  font-size: var(--font-size-base);
+  margin-bottom: 5px;
+}
+
+.form-field__inp {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: var(--font-size-base);
+
+  color: var(--color-text);
+  background: var(--color-bg);
+
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+
+  transition: border-color 0.2s ease;
+}
+
+.form-field__inp:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.form-field__inp:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.form-field--required {
+  color: var(--color-accent);
+}
+
+.form-field--error {
+  font-size: 12px;
+  color: var(--color-danger);
+  margin-top: 5px;
+}
+
+
+/* textarea */
+.form-field__inp--textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* select */
+.form-field--select {
+  cursor: pointer;
+}
+
+/* checkbox */
+.form-field--check {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.form-field--check input {
+  cursor: pointer;
+  margin: 0;
+}
+
+.group--row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.group--column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* radio */
+.form-field--radio {
+  display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.form-field--radio input {
+  cursor: pointer;
+  margin: 0;
+}

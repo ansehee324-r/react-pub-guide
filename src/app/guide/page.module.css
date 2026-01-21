@@ -48,7 +48,14 @@
   margin-bottom: 12px;
 }
 
-.row {
+.box {
+  margin: 15px 0;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.box--flex {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;

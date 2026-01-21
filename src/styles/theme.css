@@ -10,6 +10,7 @@
 
   --color-secondary: #4b5563;
   --color-danger: #b91c1c;
+  --color-accent: #b91c1c;
 
   /* Border */
   --color-border: #e5e7eb;
@@ -43,6 +44,7 @@ html[data-theme='dark'] {
 
   --color-secondary: #9ca3af;
   --color-danger: #f87171;
+  --color-accent: #f87171;
 
   /* Border */
   --color-border: #262626;

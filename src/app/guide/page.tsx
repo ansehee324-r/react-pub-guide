@@ -3,6 +3,12 @@
 import { useEffect, useRef, useState } from 'react';
 
 import Button from '@/components/Button/Button';
+import Checkbox from '@/components/form/Checkbox';
+import CheckboxGroup from '@/components/form/CheckboxGroup';
+import Input from '@/components/form/Input';
+import Radio from '@/components/form/Radio';
+import Select from '@/components/form/Select';
+import Textarea from '@/components/form/Textarea';
 import Container from '@/components/layout/Container';
 
 import styles from './page.module.css';
@@ -73,13 +79,12 @@ export default function GuidePage() {
       <h1 className={styles.title}>Guide</h1>
 
       <div ref={guideRef} className={styles.guideWrap}>
-        {/* Button */}
         <section className={styles.section}>
           <h2>Button</h2>
 
           <div>
             <h3>Variant</h3>
-            <div className={styles.row}>
+            <div className={`${styles.box} ${styles['box--flex']}`}>
               <Button>Primary</Button>
               <Button variant='outline'>Outline</Button>
             </div>
@@ -87,7 +92,7 @@ export default function GuidePage() {
 
           <div>
             <h3>Size</h3>
-            <div className={styles.row}>
+            <div className={`${styles.box} ${styles['box--flex']}`}>
               <Button size='sm'>Small</Button>
               <Button size='md'>Medium</Button>
               <Button size='lg'>Large</Button>
@@ -96,12 +101,85 @@ export default function GuidePage() {
 
           <div>
             <h3>Color / State</h3>
-            <div className={styles.row}>
+            <div className={`${styles.box} ${styles['box--flex']}`}>
               <Button>Default</Button>
               <Button color='danger'>Danger</Button>
               <Button disabled={true}>Disabled</Button>
             </div>
           </div>
+        </section>
+
+        <section className={styles.section}>
+          <h2>Form</h2>
+
+          <div>
+            <h3>Input</h3>
+            <div className={styles.box}>
+              <Input placeholder='입력해주세요' label={'title'} required={true} error={'에러 메세지'} />
+            </div>
+          </div>
+          <div>
+            <h3>Textarea</h3>
+            <div className={styles.box}>
+              <Textarea placeholder='입력해주세요' label={'title'}/>
+            </div>
+          </div>
+
+          <div>
+            <h3>Select</h3>
+            <div className={styles.box}>
+              <Select>
+                <option>Option1</option>
+                <option>Option2</option>
+                <option>Option3</option>
+              </Select>
+            </div>
+          </div>
+
+          <div>
+            <h3>Checkbox</h3>
+            <div className={styles.box}>
+              <Checkbox label='체크' />
+            </div>
+          </div>
+
+          <div>
+            <h3>Checkbox - 그룹</h3>
+            <div className={styles.box}>
+              <CheckboxGroup label={'title'} required={true}>
+                <Checkbox label='체크1' />
+                <Checkbox label='체크2' />
+                <Checkbox label='체크3' />
+              </CheckboxGroup>
+            </div>
+          </div>
+
+          <div>
+            <h3>Checkbox - 그룹(세로)</h3>
+            <div className={styles.box}>
+              <CheckboxGroup direction={'column'}>
+                <Checkbox label='체크1' />
+                <Checkbox label='체크2' />
+                <Checkbox label='체크3' />
+              </CheckboxGroup>
+            </div>
+          </div>
+
+          <div>
+            <h3>Radio</h3>
+            <div className={styles.box}>
+              <Radio 
+                name='group'
+                label='title'
+                required={true}
+                options={[
+                  { label:'옵션1', value:'op1' },
+                  { label:'옵션2', value:'op2' },
+                ]}
+              />
+            </div>
+          </div>
+
         </section>
       </div>
       <div className={styles.guideItem}>
