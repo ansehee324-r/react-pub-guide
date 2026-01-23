@@ -9,6 +9,7 @@ import Input from '@/components/form/Input';
 import Radio from '@/components/form/Radio';
 import Select from '@/components/form/Select';
 import Textarea from '@/components/form/Textarea';
+import Icon from '@/components/Icon/Icon';
 import Container from '@/components/layout/Container';
 
 import styles from './page.module.css';
@@ -179,7 +180,34 @@ export default function GuidePage() {
               />
             </div>
           </div>
+        </section>
 
+        <section className={styles.section}>
+          <h2>Icon</h2>
+
+          <div>
+            <div className={`${styles.box} ${styles['box--flex']}`}>
+              <Icon name='check' />
+              <Icon name='check' color='red' width={40} height={40} />
+              <Icon color='#222' size={40}>
+                <path
+                  d='M5 12l4 4L19 6'
+                  fill='none'
+                  stroke='currentColor'
+                  strokeWidth='2'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                />
+              </Icon>
+
+              <Icon name='close' color='red' />
+              <Icon name='arrowRight' />
+              <Icon name='plus' />
+              <Icon name='info' />
+              <Icon name='warn' size={30} color='orange' />
+              <Icon name='search' />
+            </div>
+          </div>
         </section>
       </div>
       <div className={styles.guideItem}>
