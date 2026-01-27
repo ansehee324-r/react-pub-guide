@@ -2,6 +2,8 @@ import { ReactNode } from 'react';
 
 export type IconName =
   | 'check'
+  | 'checkbox'
+  | 'checkboxOn'
   | 'close'
   | 'arrowRight'
   | 'plus'
@@ -23,6 +25,40 @@ export const iconData: Record<IconName, ReactNode> = {
       strokeLinecap='round'
       strokeLinejoin='round'
     />
+  ),
+  checkbox: (
+    <rect
+      x='3'
+      y='3'
+      width='18'
+      height='18'
+      rx='4'
+      stroke='currentColor'
+      strokeWidth='2'
+      fill='none'
+    />
+  ),
+  'checkboxOn': (
+    <>
+      <rect
+        x='3'
+        y='3'
+        width='18'
+        height='18'
+        rx='4'
+        stroke='currentColor'
+        strokeWidth='2'
+        fill='none'
+      />
+      <path
+        d='M7 12.5L10.5 16L17 9'
+        stroke='currentColor'
+        strokeWidth='2.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        fill='none'
+      />
+    </>
   ),
   close: (
     <path

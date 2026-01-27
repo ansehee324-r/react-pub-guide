@@ -65,8 +65,46 @@
 }
 
 .form-field--check input {
-  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
   margin: 0;
+}
+
+.form-field--check input:focus-visible+.checkbox__box {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.checkbox__icon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.checkbox__icon--on {
+  display: none;
+}
+
+.checkbox__icon--off {
+  display: flex;
+}
+
+/* checked 상태 */
+.form-field--check input:checked+.checkbox__box .checkbox__icon--on {
+  display: flex;
+}
+
+.form-field--check input:checked+.checkbox__box .checkbox__icon--off {
+  display: none;
 }
 
 .group--row {

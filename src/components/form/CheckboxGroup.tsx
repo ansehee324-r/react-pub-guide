@@ -14,7 +14,7 @@ export default function CheckboxGroup({
   direction = 'row',
 }: CheckboxGroupProps) {
   return (
-    <>
+    <div role='group'>
       {label && (
         <p
           className={styles['form-field__label']}
@@ -33,6 +33,6 @@ export default function CheckboxGroup({
       >
         {children}
       </div>
-    </>
+    </div>
   );
 }
